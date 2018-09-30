@@ -1,0 +1,14 @@
+digraph G {
+"chassis" -> "camera"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1590.041 sec old)\nBuffer length: 0.000 sec\n"];
+"robot_footprint" -> "chassis"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1590.041 sec old)\nBuffer length: 0.000 sec\n"];
+"chassis" -> "hokuyo"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1590.041 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "robot_footprint"[label="Broadcaster: /gazebo\nAverage rate: 10.303 Hz\nMost recent transform: 1589.947 ( 0.094 sec old)\nBuffer length: 3.300 sec\n"];
+"map" -> "odom"[label="Broadcaster: /map_odom_broadcaster\nAverage rate: 10.228 Hz\nMost recent transform: 1590.134 ( -0.093 sec old)\nBuffer length: 3.422 sec\n"];
+"chassis" -> "LiDAR_mount"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.297 Hz\nMost recent transform: 1589.951 ( 0.090 sec old)\nBuffer length: 3.302 sec\n"];
+"chassis" -> "left_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.297 Hz\nMost recent transform: 1589.951 ( 0.090 sec old)\nBuffer length: 3.302 sec\n"];
+"chassis" -> "right_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.297 Hz\nMost recent transform: 1589.951 ( 0.090 sec old)\nBuffer length: 3.302 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1590.041"[ shape=plaintext ] ;
+ }->"map";
+}
